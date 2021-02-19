@@ -205,6 +205,8 @@ source s_{{ .port_id }} {
             } elif {
                 filter{tags("noparser");};                
             } else {
+                #Guard this parser to only accept events with a valid pri
+                filter{tags("rfc3164")};
                 parser {
                     syslog-parser(time-zone({{- getenv "SC4S_DEFAULT_TIMEZONE" "GMT"}}) flags(assume-utf8, guess-timezone, store-raw-message));
                 };

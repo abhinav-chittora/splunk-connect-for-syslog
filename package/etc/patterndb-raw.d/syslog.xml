@@ -96,6 +96,18 @@
                     <value name="MESSAGE">{ ${.raw.message}</value>
                 </values>
             </rule>
+            <rule provider='rfc' id='raw_rfc3164_pri' class='splunk'>
+
+                <patterns>
+                    <pattern>@QSTRING:PRI:&lt;&gt;@@ANYSTRING@</pattern>
+                </patterns>
+                <tags>
+                    <tag>rfc3164</tag>
+                </tags>
+                <values>
+                    <value name="fields.sc4s_syslog_format">rfc3164</value>
+                </values>
+            </rule>
         </rules>
     </ruleset>
 </patterndb>
