@@ -3,8 +3,8 @@
         <rules>
             <rule provider='leef' id='raw_leef1_5424' class='splunk'>
                 <patterns>
-                    <pattern>@QSTRING::&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @@ESTRING:HOST: @LEEF:@ANYSTRING:.raw.message@</pattern>
-                    <pattern>@QSTRING::&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @LEEF:@ANYSTRING:.raw.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @@ESTRING:HOST: @LEEF:@ANYSTRING:.raw.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @LEEF:@ANYSTRING:.raw.message@</pattern>
                 </patterns>
                 <examples></examples>
                 <tags>

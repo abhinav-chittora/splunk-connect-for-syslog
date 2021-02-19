@@ -3,8 +3,8 @@
         <rules>
             <rule provider='nss' id='raw_nss_alerts' class='splunk'>
                 <patterns>
-                    <pattern>@QSTRING::&lt;&gt;@@ESTRING:.raw.MONTH: @@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@FLOAT:.raw.SEC@ @QSTRING:HOST:[]@ ZscalerNSS: @ANYSTRING:.raw.message@</pattern>
-                    <pattern>@QSTRING::&lt;&gt;@ @ESTRING:.raw.MONTH: @@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@FLOAT:.raw.SEC@ @QSTRING:HOST:[]@ ZscalerNSS: @ANYSTRING:.raw.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@@ESTRING:.raw.MONTH: @@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@FLOAT:.raw.SEC@ @QSTRING:HOST:[]@ ZscalerNSS: @ANYSTRING:.raw.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@ @ESTRING:.raw.MONTH: @@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@FLOAT:.raw.SEC@ @QSTRING:HOST:[]@ ZscalerNSS: @ANYSTRING:.raw.message@</pattern>
                 </patterns>
                 <examples>
                     <example>
@@ -26,7 +26,7 @@
             </rule>
             <rule provider='nss' id='raw_nss_web' class='splunk'>
                 <patterns>
-                    <pattern>@QSTRING::&lt;&gt;@@NUMBER:.raw.YEAR@-@NUMBER:.raw.MONTH@-@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@NUMBER:.raw.SEC@@SET::&#009;@@ANYSTRING:.raw.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@@NUMBER:.raw.YEAR@-@NUMBER:.raw.MONTH@-@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@NUMBER:.raw.SEC@@SET::&#009;@@ANYSTRING:.raw.message@</pattern>
                     <pattern>@NUMBER:.raw.YEAR@-@NUMBER:.raw.MONTH@-@NUMBER:.raw.DAY@ @NUMBER:.raw.HOUR@:@NUMBER:.raw.MIN@:@NUMBER:.raw.SEC@@SET::&#009;@@ANYSTRING:.raw.message@</pattern>
                 </patterns>
                 <tags>

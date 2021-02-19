@@ -3,8 +3,8 @@
         <rules>
             <rule provider='cef' id='raw_cef_5424' class='splunk'>
                 <patterns>
-                    <pattern>@QSTRING::&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @@ESTRING:HOST: @CEF:@ANYSTRING:.cef.message@</pattern>
-                    <pattern>@QSTRING::&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @CEF:@ANYSTRING:.cef.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @@ESTRING:HOST: @CEF:@ANYSTRING:.cef.message@</pattern>
+                    <pattern>@QSTRING:&lt;&gt;@1 @ESTRING:.raw.DATE:T@@ESTRING:.raw.TIME: @CEF:@ANYSTRING:.cef.message@</pattern>
                 </patterns>
                 <examples>
                     <example>
