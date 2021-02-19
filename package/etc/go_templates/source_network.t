@@ -203,8 +203,9 @@ source s_{{ .port_id }} {
                 #    unset(value("RAWMSG"));                
                 #};                
             } elif {
-                filter{tags("noparser");};                
-            } else {
+                filter{tags("noparser");};                                
+            } elif {
+                filter{message("^<\d+>");}; 
                 parser {
                     syslog-parser(time-zone({{- getenv "SC4S_DEFAULT_TIMEZONE" "GMT"}}) flags(assume-utf8, guess-timezone, store-raw-message));
                 };
@@ -223,6 +224,7 @@ source s_{{ .port_id }} {
                         unset(value("PROGRAM"));                
                     };                    
                 };
+            } else {
             };                                  
         };
         parser(pattern_db);
